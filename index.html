@@ -1,204 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sia - Tattoo Portfolio</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css">
-  
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sia's Quest Journal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
 
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- ── NAV ── -->
-<nav>
-  <a href="#hero" class="nav-logo">SIA<span>.</span></a>
-  <ul class="nav-links">
-    <li><a href="#portfolio">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#booking">Book</a></li>
-  </ul>
-</nav>
-
-<!-- ── HERO ── -->
-<section id="hero">
-  <div class="hero-photo">
-    <img class="hero-photo-img" src="images/hero_img.png" alt="hero_img"> 
-  </div>
-
-  <!-- GIANT NAME — sits over the photo, bleeds off right edge -->
-  <div class="hero-name-wrap">
-    <span class="hero-name-line"><span class="fl">S</span>HRIYA</span>
-    <span class="hero-name-line"><span class="fl">T</span>HAKUR</span>
-  </div>
-
-  <!-- Bottom bar -->
-  <div class="hero-bottom">
-    <div class="hero-meta">
-      <span class="hero-eyebrow">Tattoo Artist · Pune, India</span>
-      <p class="hero-tagline">Fine line, botanical & blackwork for those who carry stories.</p>
-    </div>
-    <div class="hero-cta">
-      <a href="#booking" class="btn-primary">Book a Session</a>
-      <a href="#portfolio" class="btn-ghost">View Work</a>
-    </div>
-  </div>
-
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-</section>
-
-<!-- ── PORTFOLIO ── -->
-<section id="portfolio">
-  <div class="portfolio-header reveal">
-    <div>
-      <p class="section-label">Portfolio</p>
-      <h2 class="section-title">Selected<br>Work</h2>
-      <div class="divider"></div>
-    </div>
-    <p>A curated collection of pieces — each one a conversation between ink and skin.</p>
-  </div>
-
-  <!-- <div class="filter-tabs reveal">
-    <button class="filter-tab active">All</button>
-    <button class="filter-tab">Fine Line</button>
-    <button class="filter-tab">Botanical</button>
-    <button class="filter-tab">Blackwork</button>
-    <button class="filter-tab">Geometric</button>
-  </div> -->
-
-  <div class="portfolio-grid reveal">
-    <div class="portfolio-item">
-        <div class="portfolio-item-bg"></div>
-        <img src="images/tattoo_01.jpg" alt="placeholder_tat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <div class="portfolio-item-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><div class="portfolio-overlay"><h4>Placeholder Tattoo</h4><span>Fine Line · 2026</span></div>
-    </div>
-    <div class="portfolio-item">
-        <div class="portfolio-item-bg"></div>
-        <img src="images/tattoo_04.jpg" alt="placeholder_tat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <div class="portfolio-item-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><div class="portfolio-overlay"><h4>Placeholder Tattoo</h4><span>Blackwork · 2026</span></div>
-    </div>
-    <div class="portfolio-item">
-        <div class="portfolio-item-bg"></div>
-        <img src="images/tattoo_02.jpg" alt="placeholder_tat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <div class="portfolio-item-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><div class="portfolio-overlay"><h4>Placeholder Tattoo</h4><span>Geometric · 2026</span></div>
-    </div>
-    <div class="portfolio-item">
-        <div class="portfolio-item-bg"></div>
-        <img src="images/tattoo_05.jpg" alt="placeholder_tat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <div class="portfolio-item-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><div class="portfolio-overlay"><h4>Placeholder Tattoo</h4><span>Botanical · 2026</span></div>
-    </div>
-    <div class="portfolio-item">
-        <div class="portfolio-item-bg"></div>
-        <img src="images/tattoo_03.jpg" alt="placeholder_tat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <div class="portfolio-item-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><div class="portfolio-overlay"><h4>Placeholder Tattoo</h4><span>Fine Line · 2026</span></div>
-    </div>
-    <div class="portfolio-item">
-        <div class="portfolio-item-bg"></div>
-        <img src="images/shriya_01.png" alt="placeholder_tat" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-        <div class="portfolio-item-inner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div><div class="portfolio-overlay"><h4>Placeholder Tattoo</h4><span>Blackwork · 2026</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="about-image reveal">
-    <div class="about-image-main">
-        <!-- <svg viewBox="0 0 24 24" fill="none" stroke="#c5a8d4" stroke-width="0.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/>
-        </svg> -->
-        <img src="images/shriya_03.png" alt="shriya_img" style="width:100%; height:100%; object-fit:contain;">
-    </div>
-    <div class="about-image-accent">
-        <!-- <svg viewBox="0 0 24 24" fill="none" stroke="#c5a8d4" stroke-width="0.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/>
-        </svg> -->
-        <img src="images/shriya_02.png" alt="shriya_img" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-    <div class="about-image-label">Est. 2026</div>
-  </div>
-  <div class="about-text reveal">
-    <p class="section-label">About</p>
-    <h2 class="section-title">The Artist<br>Behind the Ink</h2>
-    <div class="divider"></div>
-    <p>I'm <em>Shriya</em>, a tattoo artist with over <em>-- years of dedicated practice</em> in fine line and botanical work. Every piece I create starts as a conversation.</p>
-    <p>My approach is quiet and deliberate. I believe that <em>the best tattoos feel inevitable</em> like they were always meant to live there. I work closely with each client to shape something that is entirely theirs.</p>
-    <p>Currently based at <em>-- Studio</em>, Pune, Maharashtra. Open to guest spots and collaborations.</p>
-    <div class="about-specialties">
-      <span class="specialty-tag">Fine Line</span>
-      <span class="specialty-tag">Botanical</span>
-      <span class="specialty-tag">Blackwork</span>
-      <span class="specialty-tag">Geometric</span>
-      <span class="specialty-tag">Micro Realism</span>
-    </div>
-    <div class="about-stats">
-      <div><span class="stat-num">1+</span><span class="stat-label">Years Active</span></div>
-      <div><span class="stat-num">--</span><span class="stat-label">Pieces Done</span></div>
-      <div><span class="stat-num">--</span><span class="stat-label">Guest Spots</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ── BOOKING ── -->
-<section id="booking">
-  <div class="booking-layout">
-    <div class="booking-info reveal">
-      <p class="section-label">Booking</p>
-      <h2 class="section-title">Let's Create<br>Together</h2>
-      <div class="divider"></div>
-      <p>Tell me about your idea — the placement, the feeling, the story behind it. I read every inquiry personally and respond within -- hours.</p>
-      <div class="contact-method">
-        <div class="contact-item">
-          <div class="contact-icon">@</div>
-          <div class="contact-item-text"><span>Email</span><a href="mailto:sanilj777@gmail.com" target="_blank">sanilj777@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
-          <div class="contact-item-text"><span>Instagram</span><a href="https://www.instagram.com/_i.am.shriyathakur_" target="_blank">_i.am.shriyathakur_</a></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">◎</div>
-          <div class="contact-item-text"><span>Studio</span><span>-- --, Pune, Maharashtra</span>
-          </div>
+    <!-- ── LANDING: visual closed book, same size as open journal ── -->
+    <div id="landing">
+      <div id="closed-book">
+        <div class="closed-spine"></div>
+        <div class="closed-content">
+          <p class="cover-title">Sia</p>
+          <p class="cover-sub">✦ Quest Journal ✦</p>
+          <p class="cover-hint">click to open</p>
         </div>
       </div>
     </div>
-    <div class="booking-form reveal">
-      <div class="form-border">
-        <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" placeholder="Your name"/></div>
-          <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
-        </div>
-        <div class="form-row">
-          <div class="form-group"><label>Style</label><select><option value="" disabled selected>Choose a style</option><option>Fine Line</option><option>Botanical</option><option>Blackwork</option><option>Geometric</option><option>Not sure yet</option></select></div>
-          <div class="form-group"><label>Placement</label><input type="text" placeholder="e.g. forearm, shoulder"/></div>
-        </div>
-        <div class="form-group form-full"><label>Tell me about your idea</label><textarea placeholder="Describe your concept, size, any references or inspiration..."></textarea></div>
-      </div>
-      <button class="form-submit">Send Inquiry →</button>
-    </div>
-  </div>
-</section>
 
-<!-- ── FOOTER ── -->
-<footer>
-  <div class="footer-logo">SIA<span>.</span></div>
-  <!-- <ul class="footer-links">
-    <li><a href="#portfolio">Work</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#booking">Book</a></li>
-  </ul>
-  <div class="social-links">
-    <a href="https://www.instagram.com/_i.am.shriyathakur_" class="social-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a> 
-  </div> -->
-  <p class="footer-copy">© 2026 Shriya Thakur · India</p>
-</footer>
-<script src="script.js"></script>
-</body>
+    <!-- ── JOURNAL: hidden until landing is clicked ── -->
+    <div id="journal-wrap" class="hidden">
+      <div id="journal">
+        <!-- Ghost page — keeps Turn.js pairs aligned -->
+        <div class="page" id="p0">
+          <div class="page-content">
+            <h2 class="page-title">Title Page</h2>
+          </div>
+        </div>
+
+        <!-- Pages 1–2: Avatar + Inventory -->
+        <div class="page page-left" id="p1">
+          <div class="page-content">
+            <div class="avatar-box">[ Avatar ]</div>
+            <div class="stat-row">
+              <div class="stat-box">[ Item 1 ]</div>
+              <div class="stat-box">[ Item 2 ]</div>
+              <div class="stat-box">[ Item 3 ]</div>
+            </div>
+          </div>
+          <div class="page-number">1</div>
+        </div>
+        <div class="page page-right" id="p2">
+          <div class="page-content">
+            <div class="icon-grid">
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+              <div class="icon-box">[ Icon ]</div>
+            </div>
+            <div class="banner-box">[ Item info ]</div>
+          </div>
+          <div class="page-number">2</div>
+        </div>
+
+        <!-- Pages 3–4: About Me -->
+        <div class="page page-left" id="p3">
+          <div class="page-content">
+            <p class="page-section-label">Chapter I</p>
+            <h2 class="page-title">About<br />Me</h2>
+            <div class="page-divider"></div>
+            <p class="page-body">
+              [ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua]
+            </p>
+          </div>
+          <div class="page-number">3</div>
+        </div>
+        <div class="page page-right" id="p4">
+          <div class="page-content">
+            <p class="page-section-label">About Me</p>
+            <div class="placeholder-box tall">[ Illustration ]</div>
+          </div>
+          <div class="page-number">4</div>
+        </div>
+
+        <!-- Pages 5–6: Projects -->
+        <div class="page page-left" id="p5">
+          <div class="page-content">
+            <p class="page-section-label">Chapter II</p>
+            <h2 class="page-title">Projects</h2>
+            <div class="page-divider"></div>
+            <div class="placeholder-box">[ Project 1 ]</div>
+            <div class="placeholder-box">[ Project 2 ]</div>
+          </div>
+          <div class="page-number">5</div>
+        </div>
+        <div class="page page-right" id="p6">
+          <div class="page-content">
+            <p class="page-section-label">Projects</p>
+            <div class="placeholder-box">[ Project 3 ]</div>
+            <div class="placeholder-box">[ Project 4 ]</div>
+          </div>
+          <div class="page-number">6</div>
+        </div>
+
+        <!-- Pages 7–8: Internship -->
+        <div class="page page-left" id="p7">
+          <div class="page-content">
+            <p class="page-section-label">Chapter III</p>
+            <h2 class="page-title">Work &<br />Internship</h2>
+            <div class="page-divider"></div>
+            <p class="page-body">
+              [ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ]
+            </p>
+          </div>
+          <div class="page-number">7</div>
+        </div>
+        <div class="page page-right" id="p8">
+          <div class="page-content">
+            <p class="page-section-label">Work & Internship</p>
+            <div class="placeholder-box tall">[ Timeline / Illustration ]</div>
+          </div>
+          <div class="page-number">8</div>
+        </div>
+
+        <!-- Pages 9–10: Skills -->
+        <div class="page page-left" id="p9">
+          <div class="page-content">
+            <p class="page-section-label">Chapter IV</p>
+            <h2 class="page-title">Skills &<br />Tools</h2>
+            <div class="page-divider"></div>
+            <div class="skills-grid">
+              <div class="skill-item">[ Skill ]</div>
+              <div class="skill-item">[ Skill ]</div>
+              <div class="skill-item">[ Skill ]</div>
+              <div class="skill-item">[ Skill ]</div>
+              <div class="skill-item">[ Skill ]</div>
+              <div class="skill-item">[ Skill ]</div>
+            </div>
+          </div>
+          <div class="page-number">9</div>
+        </div>
+        <div class="page page-right" id="p10">
+          <div class="page-content">
+            <p class="page-section-label">Skills & Tools</p>
+            <div class="placeholder-box tall">[ Skills illustration ]</div>
+          </div>
+          <div class="page-number">10</div>
+        </div>
+
+        <!-- Pages 11–12: Contact -->
+        <div class="page page-left" id="p11">
+          <div class="page-content">
+            <p class="page-section-label">Chapter V</p>
+            <h2 class="page-title">Find<br />Me</h2>
+            <div class="page-divider"></div>
+            <p class="page-body">[ Lorem ipsum dolor sit amet, consectetur adipiscing elit ]</p>
+            <div class="contact-links">
+              <div class="contact-item">✉ email@email.com</div>
+              <div class="contact-item">⬡ LinkedIn</div>
+              <div class="contact-item">◈ Instagram</div>
+            </div>
+          </div>
+          <div class="page-number">11</div>
+        </div>
+        <div class="page page-right" id="p12">
+          <div class="page-content">
+            <p class="page-section-label">Contact</p>
+            <div class="placeholder-box tall">[ Closing illustration ]</div>
+          </div>
+          <div class="page-number">12</div>
+        </div>
+
+        <!-- Page 13: Back cover — single closing page -->
+        <div class="page back-cover" id="p13">
+          <div class="back-cover-content">
+            <p class="cover-end">✦</p>
+          </div>
+        </div>
+      </div>
+      <!-- /#journal -->
+      <button id="btn-close">✕</button>
+    </div>
+    <!-- /#journal-wrap -->
+
+    <script src="lib/jquery.min.1.7.js"></script>
+    <script src="lib/jgestures.min.js"></script>
+    <script src="lib/turn.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

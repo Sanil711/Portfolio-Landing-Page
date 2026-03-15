@@ -1,53 +1,52 @@
-const cursor = document.getElementById("cursor");
-const ring = document.getElementById("cursorRing");
-let cx = 0,
-  cy = 0,
-  rx = 0,
-  ry = 0;
+$(document).ready(function () {
+  var PAGE_W = 440;
+  var PAGE_H = 600;
+  var ready = false;
 
-document.addEventListener("mousemove", (e) => {
-  cx = e.clientX;
-  cy = e.clientY;
-  cursor.style.left = cx + "px";
-  cursor.style.top = cy + "px";
-});
-(function loop() {
-  rx += (cx - rx) * 0.12;
-  ry += (cy - ry) * 0.12;
-  ring.style.left = rx + "px";
-  ring.style.top = ry + "px";
-  requestAnimationFrame(loop);
-})();
-
-document.querySelectorAll("a, button, .portfolio-item").forEach((el) => {
-  el.addEventListener("mouseenter", () => {
-    cursor.classList.add("expand");
-    ring.classList.add("expand");
-  });
-  el.addEventListener("mouseleave", () => {
-    cursor.classList.remove("expand");
-    ring.classList.remove("expand");
-  });
-});
-
-const obs = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add("visible"), i * 80);
-        obs.unobserve(e.target);
-      }
+  // ── Init Turn.js ──────────────────────────
+  function initJournal() {
+    $("#journal").turn({
+      width: PAGE_W * 2,
+      height: PAGE_H,
+      display: "double",
+      autoCenter: true,
+      gradients: true,
+      acceleration: true,
+      pages: 14, // 1 ghost page + 12 inner + 1 back cover
+      when: {
+        turned: function (e, page) {
+          console.log("Now on page:", page);
+        },
+      },
     });
-  },
-  { threshold: 0.1 },
-);
-document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+    // Jump past ghost page straight to Avatar + Inventory spread
+    $("#journal").turn("page", 2);
+    ready = true;
+  }
 
-document.querySelectorAll(".filter-tab").forEach((tab) => {
-  tab.addEventListener("click", () => {
-    document
-      .querySelectorAll(".filter-tab")
-      .forEach((t) => t.classList.remove("active"));
-    tab.classList.add("active");
+  // ── Click closed book → open journal ──────
+  $("#closed-book").on("click", function () {
+    $("#landing").addClass("hide");
+
+    setTimeout(function () {
+      $("#landing").hide();
+      $("#journal-wrap").removeClass("hidden");
+      if (!ready) initJournal();
+    }, 500);
   });
+
+  // ── Keyboard navigation ───────────────────
+  $(document).on("keydown", function (e) {
+    if ($("#journal-wrap").hasClass("hidden")) return;
+    if (e.key === "ArrowRight") $("#journal").turn("next");
+    if (e.key === "ArrowLeft") $("#journal").turn("previous");
+  });
+});
+
+$("#btn-close").on("click", function () {
+  $("#journal-wrap").addClass("hidden");
+  $("#landing").show();
+  setTimeout(function () {
+    $("#landing").removeClass("hide");
+  }, 50);
 });
