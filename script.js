@@ -22,6 +22,26 @@ $(document).ready(function () {
     // Jump past ghost page straight to Avatar + Inventory spread
     $("#journal").turn("page", 2);
     ready = true;
+    // Fix touch on mobile — map swipe left/right to page turns
+    $("#journal").on("touchstart", function (e) {
+      var touch = e.originalEvent.touches[0];
+      $(this).data("touchStartX", touch.clientX);
+    });
+
+    $("#journal").on("touchend", function (e) {
+      var touch = e.originalEvent.changedTouches[0];
+      var startX = $(this).data("touchStartX");
+      var diff = startX - touch.clientX;
+
+      if (Math.abs(diff) > 50) {
+        // minimum swipe distance
+        if (diff > 0) {
+          $("#journal").turn("next"); // swipe left = next page
+        } else {
+          $("#journal").turn("previous"); // swipe right = previous page
+        }
+      }
+    });
   }
 
   // Scale book to fit mobile screen
