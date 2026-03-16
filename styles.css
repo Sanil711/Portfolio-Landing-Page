@@ -300,16 +300,21 @@ body {
   top: 1.2rem;
   right: 1.5rem;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.15);
-  color: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.4);
   font-size: 0.7rem;
   letter-spacing: 0.2em;
   padding: 0.4rem 0.9rem;
   cursor: pointer;
   z-index: 30;
-  transition: color 0.3s, border-color 0.3s;
+  transition:
+    color 0.3s,
+    border-color 0.3s;
 }
-#btn-close:hover { color: var(--accent); border-color: var(--accent); }
+#btn-close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 /* ─────────────────────────────────
    ICON GRID (p2)
@@ -403,9 +408,26 @@ body {
    RESPONSIVE
 ───────────────────────────────── */
 @media (max-width: 920px) {
-  #closed-book,
+  #landing,
+  #journal-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #closed-book {
+    width: 440px;
+    height: 600px;
+    transform: scale(var(--book-scale));
+    transform-origin: center center;
+    flex-shrink: 0;
+  }
+
   #journal {
-    width: 100vw;
-    height: 100dvh;
+    width: 880px;
+    height: 600px;
+    transform: scale(var(--book-scale));
+    transform-origin: center center;
+    flex-shrink: 0;
   }
 }

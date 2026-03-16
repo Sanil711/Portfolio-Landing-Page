@@ -24,6 +24,16 @@ $(document).ready(function () {
     ready = true;
   }
 
+  // Scale book to fit mobile screen
+  function scaleBook() {
+    var scaleW = window.innerWidth / 880;
+    var scaleH = window.innerHeight / 600;
+    var scale = Math.min(scaleW, scaleH, 1); // never scale UP, only down
+    document.documentElement.style.setProperty("--book-scale", scale);
+  }
+  scaleBook();
+  $(window).on("resize", scaleBook);
+
   // ── Click closed book → open journal ──────
   $("#closed-book").on("click", function () {
     $("#landing").addClass("hide");
